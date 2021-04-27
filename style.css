@@ -1,3 +1,7 @@
+:root {
+  --border-color: #fff;
+}
+
 body, html, div {
   margin: 0;
   padding: 0;
@@ -105,16 +109,34 @@ div#author {
   }
 }
 
+div#container {
+  border-color: var(--border-color);
+}
+
+/* Google Refresh Icon */
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+span#refresh {
+  user-select: none;
+}
+
+span#refresh:hover {
+  cursor: pointer;
+  color: var(--border-color);
+}
+
 /* Responsive */
+
 @media (max-width: 1024px) {
   div#container {
     padding: 5px 25px;
   }
-
   div#quote {
     font-size: 40px;
   }
-
   div#author {
     font-size: 30px;
   }
@@ -122,11 +144,10 @@ div#author {
 
 @media (max-width: 400px) {
   div#quote {
-    font-size: 30px;
+    font-size: 20px;
   }
-
   div#author {
-    font-size: 25px;
+    font-size: 15px;
   }
 }
 
@@ -134,15 +155,12 @@ div#author {
   div#container {
     padding: 0;
   }
-
   div#quote {
     font-size: 15px;
   }
-
   div#author {
     font-size: 10px;
   }
-
   .flyinTxtCont {
     margin: 10px;
   }
