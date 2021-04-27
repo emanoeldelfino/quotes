@@ -20,7 +20,7 @@ function getHexColor() {
 
 const root = document.documentElement;
 const hexColor = getHexColor();
-root.style.setProperty('--border-color', hexColor);
+root.style.setProperty('--random-color', hexColor);
 
 // const divContainer = document.querySelector('div#container');
 // divContainer.style.borderColor = hexColor;

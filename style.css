@@ -1,5 +1,5 @@
 :root {
-  --border-color: #fff;
+  --random-color: #fff;
 }
 
 body, html, div {
@@ -110,7 +110,7 @@ div#author {
 }
 
 div#container {
-  border-color: var(--border-color);
+  border-color: var(--random-color);
 }
 
 /* Google Refresh Icon */
@@ -125,7 +125,7 @@ span#refresh {
 
 span#refresh:hover {
   cursor: pointer;
-  color: var(--border-color);
+  color: var(--random-color);
 }
 
 /* Responsive */
