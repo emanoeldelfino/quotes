@@ -1,0 +1,139 @@
+body, html, div {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div#container {
+  background: #000;
+  color: #fff;
+  border: 3px solid #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 250px;
+  height: 100vh;
+}
+
+div#quote, div#author {
+  font-family: 'Akaya Kanadaka', cursive;
+  margin-bottom: 20px;
+}
+
+div#quote {
+  font-size: 50px;
+}
+
+div#author {
+  font-size: 25px;
+}
+
+/* Text flying effects */
+
+.cater3-movingBG {
+  height: 100%;
+  background-size: 125%;
+  background-repeat: repeat-x;
+  animation: animatedBackground 15s linear alternate infinite;
+}
+
+.flyinTxtCont {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: center;
+  padding-bottom: 10%;
+  margin-left: 2em;
+}
+
+.flyIn {
+  color: #fff;
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  line-height: 1.2em;
+  position: relative;
+  text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
+}
+
+.lineOne {
+  transition-delay: .3s;
+  transition: .5s ease in;
+  animation: txtFlyIn .5s linear;
+}
+
+.lineTwo {
+  transition-delay: .4s;
+  transition: .6s ease in;
+  animation: txtFlyIn .6s linear;
+}
+
+.lineOne, .lineTwo {
+  font-size: 110px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes txtFlyIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  div#container {
+    padding: 5px 25px;
+  }
+
+  div#quote {
+    font-size: 40px;
+  }
+
+  div#author {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 260px) {
+  div#container {
+    padding: 0;
+  }
+
+  div#quote {
+    font-size: 30px;
+  }
+
+  div#author {
+    font-size: 25px;
+  }
+
+  .flyinTxtCont {
+    margin: 10px;
+  }
+}
